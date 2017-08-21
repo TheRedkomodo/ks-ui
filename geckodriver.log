@@ -1,0 +1,35 @@
+1500864665551	geckodriver	INFO	Listening on 127.0.0.1:58679
+1500864666531	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
+1500864668519	Marionette	INFO	Listening on port 58692
+1500864668620	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500864668783	Marionette	DEBUG	loaded listener.js
+1500864668837	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1500864668852	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1500864668852	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+2017-07-23 22:51:08.956 plugin-container[25665:5242764] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x923b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2017-07-23 22:51:08.957 plugin-container[25665:5242764] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9503, name = 'com.apple.CFPasteboardClient'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1500864669187	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "file:///Users/jamescarter/Desktop/the%20work/komodosign/test/sample2.html"
+1500864669282	Marionette	DEBUG	Received DOM event "pageshow" for "file:///Users/jamescarter/Desktop/the%20work/komodosign/test/sample2.html"
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1500867701635	Marionette	INFO	Ceased listening
+1500871276600	geckodriver	INFO	Listening on 127.0.0.1:52100
+1500871277602	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
+1500871279271	Marionette	INFO	Listening on port 52113
+1500871279368	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500871279531	Marionette	DEBUG	loaded listener.js
+1500871279587	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1500871279600	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1500871279601	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+2017-07-24 00:41:19.769 plugin-container[25834:5281922] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x923b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2017-07-24 00:41:19.772 plugin-container[25834:5281922] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9503, name = 'com.apple.CFPasteboardClient'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1500871279961	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "file:///Users/jamescarter/Desktop/the%20work/komodosign/test/sample2.html"
+1500871280146	Marionette	DEBUG	Received DOM event "pageshow" for "file:///Users/jamescarter/Desktop/the%20work/komodosign/test/sample2.html"

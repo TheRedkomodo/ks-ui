@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="js/dropzone-4.3.0/dist/dropzone.css">
+  </head>
+  <body>
+    <form action="http://localhost:3000/upload/123"
+      class="dropzone"
+      id="my-awesome-dropzone"></form>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="js/dropzone-4.3.0/dist/dropzone.js"></script>
+  <script type="text/javascript">
+    var captureFile = (file) => {
+      console.log('captured file: ', file);
+    }
+    Dropzone.options.myAwesomeDropzone = {
+      init: function() {
+        this.on("addedfile", captureFile);
+        this.on('success', (file, res) => {
+          console.log('File uploaded successfully');
+          window.location = res;
+        })
+      }
+    };
+  </script>
+</html>

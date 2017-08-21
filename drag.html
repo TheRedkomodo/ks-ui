@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./dragula/dist/dragula.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>DragNDrop</title>
+  </head>
+  <body class="dragula-container">
+    <div id="left" style="width: 200px; height: 20px; background: black;">
+      <div style="width: 20px; height: 20px; background: red;">
+        click to sign
+      </div>
+    </div>
+    <!-- <div  id="bottom" style="margin-top: 20px; width: 2000px; height: 200px; background: blue;"></div> -->
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+  </script>
+
+    <script src='./dragula/dist/dragula.min.js'></script>
+    <script src="node_modules/interactjs/dist/interact.min.js"></script>
+    <script type="text/javascript">
+    var left = document.querySelector('#left');
+    // interact('div',{context: left})
+    //   .draggable({
+    //     // enable inertial throwing
+    //     inertia: true,
+    //     // keep the element within the area of it's parent
+    //     // restrict: {
+    //     //   restriction: "parent",
+    //     //   endOnly: true,
+    //     //   elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    //     // },
+    //     // enable autoScroll
+    //     autoScroll: true,
+    //     // call this function on every dragmove event
+    //     onmove: dragMoveListener,
+    //   })
+      interact('#left div')
+      .resizable({
+        // edges: { bottom: true, right: true }
+        // squareResize: true
+        edges: { left: true, right: true, bottom: true, top: true },
+        preserveAspectRatio: true
+      })
+      .on('resizemove', function(event) {
+        var target = event.target;
+
+   // add the change in coords to the previous width of the target element
+   var
+     newWidth  = parseFloat(target.style.width ) + event.dx,
+     newHeight = parseFloat(target.style.height) + event.dy;
+
+   // update the element's style
+   target.style.width  = newWidth + 'px';
+   target.style.height = newHeight + 'px';
+
+  //  target.textContent = newWidth + '×' + newHeight;
+      })
+
+      function dragMoveListener (event) {
+        var target = event.target,
+            // keep the dragged position in the data-x/data-y attributes
+            x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+            y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+        // translate the element
+        target.style.webkitTransform =
+        target.style.transform =
+          'translate(' + x + 'px, ' + y + 'px)';
+
+        // update the posiion attributes
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+      }
+
+      //
+      // console.log('containers: ', dragula());
+      // dragula([document.querySelector('#left'), document.querySelector('#bottom')],
+      // {
+      //   direction: 'vertical',
+      //   copy: false,
+      //   revertOnSpill: true
+      // });
+    </script>
+  </body>
+</html>
